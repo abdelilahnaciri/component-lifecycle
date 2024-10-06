@@ -4,9 +4,12 @@ import HomePage from "./pages/HomePage";
 import ProductsPage from "./pages/Products";
 import AboutUsPage from "./pages/AboutUsPage";
 import { useState } from "react";
+import HooksPage from "./pages/HooksPage";
 
 function App() {
-  const [page, setPage] = useState("home");
+  const [page, setPage] = useState<"home" | "products" | "about" | "useEffect">(
+    "home"
+  );
   return (
     <div className="container mx-auto">
       <h1
@@ -19,6 +22,7 @@ function App() {
       {page === "home" && <HomePage />}
       {page === "products" && <ProductsPage />}
       {page === "about" && <AboutUsPage />}
+      {page === "useEffect" && <HooksPage />}
     </div>
   );
 }
