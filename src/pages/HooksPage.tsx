@@ -50,6 +50,7 @@ const HooksPage = () => {
   useEffect(() => {
     const controller = new AbortController();
     const signal = controller.signal;
+    // ** IIFE
     (async () => {
       try {
         const response = await (
