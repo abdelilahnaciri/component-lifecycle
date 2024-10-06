@@ -50,20 +50,20 @@ const HooksPage = () => {
   useEffect(() => {
     const controller = new AbortController();
     const signal = controller.signal;
-    const fetchProducts = async () => {
+    (async () => {
       try {
-        const response = await fetch("https://dummyjson.com/products", {
-          signal,
-        });
-        const jsonData = await response.json();
-        setProducts(jsonData.products);
+        const response = await (
+          await fetch("https://dummyjson.com/products", {
+            signal,
+          })
+        ).json();
+        // const jsonData = await response.json();
+        setProducts(response.products);
         // console.log(signal);
       } catch (error) {
         console.log(error);
       }
-    };
-
-    fetchProducts();
+    })();
 
     return () => {
       controller.abort();
