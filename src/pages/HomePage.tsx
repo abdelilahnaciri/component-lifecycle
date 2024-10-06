@@ -20,28 +20,28 @@ class HomePage extends Component<IProps, IState> {
       products: [],
     };
     // console.log(this.state);
-    // console.log("%cMounting - Constructor() - #1", constructorStyle);
+    console.log("%cMounting - Constructor() - #1", constructorStyle);
   }
-  // componentDidMount() {
-  //   console.log(
-  //     "%cDid Mount - componentDidMount() - #3 - API",
-  //     didMountingStyle
-  //   );
-  // }
-  // componentDidUpdate() {
-  //   console.log(
-  //     "%cDid Update - componentDidUpdate() - After re-render",
-  //     didUpdatingStyle
-  //   );
-  // }
-  // componentWillUnmount() {
-  //   console.log(
-  //     "%cWill Unmounting - componentWillUnmout() - Destroyed",
-  //     unmountingStyle
-  //   );
-  // }
+  componentDidMount() {
+    console.log(
+      "%cDid Mount - componentDidMount() - #3 - API",
+      didMountingStyle
+    );
+  }
+  componentDidUpdate() {
+    console.log(
+      "%cDid Update - componentDidUpdate() - After re-render",
+      didUpdatingStyle
+    );
+  }
+  componentWillUnmount() {
+    console.log(
+      "%cWill Unmounting - componentWillUnmout() - Destroyed",
+      unmountingStyle
+    );
+  }
   render() {
-    // console.log("%cRendering - Render() | Re-render - #2", renderingStyle);
+    console.log("%cRendering - Render() | Re-render - #2", renderingStyle);
     return (
       <div>
         <h2>Home Page</h2>
